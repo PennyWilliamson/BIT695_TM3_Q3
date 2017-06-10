@@ -41,7 +41,7 @@ CREATE TABLE library_borrowers (
 		);
 		
 CREATE TABLE schedule (
-		Day date NOT NULL,
+		Day varchar(10) NOT NULL,
 		Boardgame varchar(60) NOT NULL,
 		Venue varchar(125) NOT NULL,
 		EventType varchar(60) NOT NULL,
