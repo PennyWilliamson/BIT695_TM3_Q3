@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+ <html lang=en-GB>
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <link rel="StyleSheet" href="styles.css" type="text/css" media="screen" />
+ <title>Games Borrowers</title>
+ 
+</head>
+<body>
+ 
+<form id="Borrowers" 
+	method="post" 
+	enctype="application/x-www-form-urlencoded"
+	action="BorrowersSubmit.php">
+	<fieldset>
+	<legend> Add a game </legend>
+	<ul>
+	<li>
+<label>Member ID: </label>
+<input name = "memberID" type="int" id="memberID" tabindex="1" title="memberID" 
+placeholder="Please enter member ID" required pattern="[0-9]+"> 
+ <span class="error">* <?php echo $memberIDErr;?></span>
+</li>
+<li>
+<label>First name: </label>
+<input name = "firstName" type="text" id="firstName" tabindex="2" title="firstName" 
+placeholder="Please enter first name" required pattern="[a-z A-Z]+"> 
+ <span class="error">* <?php echo $firstnameErr;?></span>
+</li>
+<li>
+<label>Boardgame borrowed: </label>
+<input name = "borrowed" type="text" id="borrowed" tabindex="3" title="borrowed" 
+placeholder="Please enter name of boardgame" required pattern="[a-z A-Z 0-9]+">
+<span class="error">* <?php echo $boardgameErr;?></span>
+</li>
+<li>
+</ul>
+<input type = "submit" value = "submit">
+</fieldset>
+</form>
+	</body>
+	</html>
+	<!--- Required pattern is reg expressions. The span tag allows for the fields to be 
+	marked as required by an astrix.
+	The php echo statement is to display the errors from server side validation. --->
+	
+	

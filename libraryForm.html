@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+ <html lang=en-GB>
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <link rel="StyleSheet" href="styles.css" type="text/css" media="screen" />
+ <title>Games Library</title>
+ 
+</head>
+<body>
+ 
+<form id="Library" 
+	method="post" 
+	enctype="application/x-www-form-urlencoded"
+	action="librarySubmit.php">
+	<fieldset>
+	<legend> Add a game </legend>
+	<ul>
+	<li>
+<label>Member ID: </label>
+<input name = "memberID" type="int" id="memberID" tabindex="1" title="memberID" 
+placeholder="Please enter member ID" required pattern="[0-9]+"> 
+ <span class="error">* <?php echo $memberIDErr;?></span>
+</li>
+<li>
+<label>First name: </label>
+<input name = "firstName" type="text" id="firstName" tabindex="2" title="firstName" 
+placeholder="Please enter first name" required pattern="[a-z A-Z]+"> 
+ <span class="error">* <?php echo $fnameErr;?></span>
+</li>
+<li>
+<label>Boardgame: </label>
+<input name = "boardgame" type="text" id="boardgame" tabindex="3" title="boardgame" 
+placeholder="Please enter name of boardgame" required pattern="[a-z A-Z 0-9]+">
+<span class="error">* <?php echo $boardgameErr;?></span>
+</li>
+<li>
+<label>Available to borrow?: </label>
+<input name = "available" type="text" id="available" tabindex="4" Title="available" 
+placeholder="Is it available" required pattern="[a-z A-Z 0-9]+">
+<span class="error">* <?php echo $availableErr;?></span>
+</li>
+<li>
+<label>Notes: </label>
+<input name = "notes" type="text" id="notes" tabindex="5" title="notes" 
+placeholder="Brief information about game" required pattern="[a-z A-Z 0-9]+">
+<span class="error">* <?php echo $notesErr;?></span>
+</li>
+</ul>
+<input type = "submit" value = "submit">
+</fieldset>
+</form>
+	</body>
+	</html>
+	<!--- Required pattern is reg expressions. The span tag allows for the fields to be 
+	marked as required by an astrix.
+	The php echo statement is to display the errors from server side validation. --->
+	
+	

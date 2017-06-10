@@ -1,0 +1,23 @@
+body {
+        margin-top: 24px;
+		margin-bottom: 0px;
+
+		margin-right: 150px
+}
+		
+legend {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+	text-align: center;
+}
+input {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	width: 95%
+	
+}
+input:focus {
+	border: 3px solid #0000ff;
+	background-color: lightgrey;
+}
+	
